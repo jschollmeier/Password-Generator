@@ -6,19 +6,24 @@ var lowcharString = "qwertyuiopasdfghjklzxcvbnm";
 var uppcharString = "QWERTYUIOPASDFGHJKLZXCVBNM";
 var numString = "1234567890";
 var specialString = "!@#$%^&*()_+-=`?><"
-var midString=null;
+var midString;
 var length;
 var charTypes;
-var lowercase = false;
-var uppercase = false;
-var numeric = false;
-var specialChar = false;
+var lowercase;
+var uppercase;
+var numeric;
+var specialChar;
 var randNum = 0;
 var passwordText;
 
 // Write password to the #password input
 function writePassword() { 
-
+  midString=null;
+  lowercase = false;
+  uppercase = false;
+  numeric = false;
+  specialChar = false;
+  
   length = prompt("How many characters should your password be? (must be between 8-128 characters)");
   charTypes = prompt("What types of characters do you want -- 1. lowercase 2. uppercase 3. numeric 4. Special --(type all the numbers of the types you want)"); 
 
@@ -122,7 +127,8 @@ function writePassword() {
   
   passwordText = document.querySelector("#password");
   
-  passwordText.value = ranString;
+  passwordText.value = ranString; 
+  
 
 }}
 
